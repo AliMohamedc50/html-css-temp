@@ -21,8 +21,12 @@ header::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #11111187;
+    /* background: #111111ad; */
+    background: #373737f9;
+    /* opacity: 0.1; */
     z-index: 1;
+    animation: colorChange 1s ease-in-out forwards;
+    animation-delay: 0.5s;
 }
 
 header nav {
@@ -145,7 +149,8 @@ section .container .box h3 {
 section .container .box p {
     line-height: 1.3;
     margin-bottom: 20px;
-    font-size: 17px;
+    font-size: 16px;
+    color: #ffffffb4;
 }
 
 
@@ -160,3 +165,16 @@ section .container .box button {
     margin-bottom: 10px;
     letter-spacing: 2.5px;
 }
+
+
+
+
+@keyframes colorChange {
+    0% {
+        background: #373737f9;
+    }
+    100% {
+        background: #222b37ad;
+    }
+}
+
