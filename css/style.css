@@ -44,15 +44,22 @@ header nav {
     font-size: 25px;
     font-weight: 600;
     color: white;
+    font-family: cursive;
+    letter-spacing: 3px;
     /* z-index: 10; */
 }
 
+.logo span {
+    font-weight: bold;
+    color: #1B6B93;
+    font-size: 30px;
+}
 
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
-    z-index: 10;
+    z-index: 1;
+    font-family: sans-serif;
 }
 
 
@@ -62,7 +69,7 @@ header nav ul li {
     transition: .2s;
 }
 header nav ul li:hover {
-    background: rgb(11, 9, 18);
+    background: #0b0912;
     border-radius: 5px;
 
 }
@@ -71,6 +78,7 @@ header .text {
     position: absolute;
     top:  50%;
     left: 50%; 
+    min-width: 313px;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
@@ -164,18 +172,127 @@ section .container .box button {
     color: white;
     margin-bottom: 10px;
     letter-spacing: 2.5px;
+    transition: .2s;
+}
+
+section .container .box button:hover {
+    opacity: .8;
+}
+
+
+footer {
+    background: #252525f9;
+    padding-top: 50px;
 }
 
 
 
+footer .text {
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+}
 
+
+footer .text h2 {
+    padding-bottom: 25px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+footer .text p {
+    padding-bottom: 25px;
+    color: #ffffff80;
+    font-family: sans-serif;
+    line-height: 1.5;
+
+}
+footer .text h5 {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+footer .text h5 span {
+    font-weight: bold;
+}
+.spans {
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 14px;
+    border-radius: 49px;
+    transition: .3s;
+    position: relative;
+}
+.pop {
+    position: relative;
+}
+/* nav .pop ul {
+    display: flex;
+} */
+
+
+.spans:hover {
+    background: #0080ff21;
+}
+.spans {
+    display: none;
+}
+
+
+.spans span {
+    background-color: #000000;
+    width: 100%;
+    height: 3px;
+    z-index: 300;
+    
+}
 @keyframes colorChange {
     0% {
         background: #373737f9;
     }
     100% {
         background: #222b37ad;
-        
+    }
+}
+@media only screen and (max-width: 1120px) {
+    section .container .box  {
+        width: calc( (100% / 2 ) - 20px );
+    }
+}
+@media only screen and (max-width: 1000px) {
+    section .container .box  {
+        width: calc( (100% / 2 ) - 20px );
+    }
+}
+@media only screen and (max-width: 830px) {
+        section .container .box  {
+        width: 100% ;
+    }
+    header .text h2 {
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    header .text h2 {
+        font-size: 30px;
+    }
+    nav .pop ul{
+        transform: translate(-50px, 97px);
+        position: absolute;
+        display: flex;
+        background-color: #18181bb5;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+    .spans {
+        display: flex;
     }
 }
 
